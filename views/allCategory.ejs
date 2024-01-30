@@ -1,0 +1,22 @@
+<%- include("partials/top") %>
+
+
+<div class="card-body">
+    <h2>All CATEGORY</h2>
+<ul>
+    <% category.forEach((cat) => {%>
+        <li class="list-group-item" style="background-color:<%= cat.color;%>">
+            <a href="/category/task/<%= cat.id %>">
+            <%= cat.category %></li>
+        </a>
+    <%}); %>
+  
+</ul>
+
+</div>
+
+
+ 
+
+
+<%- include("partials/bottom") %>
