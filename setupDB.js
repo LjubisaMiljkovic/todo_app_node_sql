@@ -17,7 +17,7 @@ const prioritySQL ="CREATE TABLE priority " +
 
 
 
-const taskSQL ="CREATE TABLE taskSQL " + 
+const taskSQL ="CREATE TABLE tasksql " + 
                     "(id INT(11) NOT NULL AUTO_INCREMENT, " +
                     "title VARCHAR(20) NOT NULL, " +
                     "description TEXT NOT NULL, " +

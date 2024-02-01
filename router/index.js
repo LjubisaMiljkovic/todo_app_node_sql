@@ -4,6 +4,13 @@ const router = Router();
 router.get('/', (req,res) => { 
     res.render("home")
 });
-router.use("/category",require("./category.js"))
+router.use("/category",require("./category"));
+router.use("/task",require("./task"));
+
+router.use("*", (req, res) =>{
+    res.render("404")
+})
+
+
 
 module.exports =router;

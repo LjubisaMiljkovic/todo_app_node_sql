@@ -6,9 +6,11 @@
 <ul>
     <% category.forEach((cat) => {%>
         <li class="list-group-item" style="background-color:<%= cat.color;%>">
-            <a href="/category/task/<%= cat.id %>">
-            <%= cat.category %></li>
+            <a href="/category/<%= cat.id %>/task/">
+            <%= cat.category %>
         </a>
+        <span><%= cat.numberTask %></span>
+    </li>
     <%}); %>
   
 </ul>

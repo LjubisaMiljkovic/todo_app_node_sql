@@ -7,7 +7,11 @@ server.use(express.static(__dirname+"/node_modules/bootstrap/dist/css"))
 server.set("view engine", "ejs");
 server.use("/",require("./router"));
 
-
+server.use((err,req,res,next)=>{
+    if(err){
+        res.send(err)
+    }
+})
 server.listen(PORT, () => { 
     console.log("Server je pokrenut")
  })

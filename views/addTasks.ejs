@@ -1,0 +1,33 @@
+<%- include("partials/top") %>
+
+
+<div class="card-body">
+    <h2>Add task</h2>
+</div>
+
+<form action="/task/add" method="POST">
+    <input class="form-control mb-3" type="text" placeholder="Title" name="title">
+    <textarea class="form-control mb-3" name="description" placeholder="description" cols="20" rows="5"></textarea>
+    <label>Deadline</label>
+    <input class="form-control mb-3" type="date" name="deadline">
+    <label>category</label>
+    <select class="form-control mb-3" name="categoryID">
+        <% category.forEach((cat) => { %>
+            <option value="<%= cat.id %>"><%= cat.category %></option>
+         
+        <% }) %>
+    </select>
+    <label>Priority</label>
+    <select class="form-control mb-3" name="categoryID">
+        <% priority.forEach((pri) => { %>
+            <option value="<%= pri.id %>"><%= pri.priority %></option>
+         
+        <% }) %>
+    </select>
+    
+    <button class="btn btn-primary">ADD</button>
+</form>
+ 
+
+
+<%- include("partials/bottom") %>
